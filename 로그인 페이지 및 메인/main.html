@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .sidebar {
+            width: 100px;
+            /* 사이드바가 숨겨진 상태 */
+            background-color: #333;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: width 0.5s;
+        }
+
+        .sidebar:hover {
+            width: 300px;
+        }
+
+        .sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #333;
+        }
+
+        .submenu {
+            display: none;
+            /* 기본적으로 하위 메뉴는 숨겨짐 */
+            padding-left: 20px;
+        }
+
+        .sidebar a.active+.submenu {
+            display: block;
+            /* 활성화된 메뉴의 하위 메뉴만 표시 */
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="#" class="menu">Menu 1</a>
+        <div class="submenu">
+            <a href="#">Submenu 1-1</a>
+            <a href="#">Submenu 1-2</a>
+        </div>
+        <a href="#" class="menu">Menu 2</a>
+        <div class="submenu">
+            <a href="#">Submenu 2-1</a>
+            <a href="#">Submenu 2-2</a>
+        </div>
+        <a href="#" class="menu">Menu 3</a>
+        <div class="submenu">
+            <a href="#">Submenu 3-1</a>
+            <a href="#">Submenu 3-2</a>
+        </div>
+        <a href="#" class="menu">Menu 4</a>
+        <div class="submenu">
+            <a href="#">Submenu 4-1</a>
+            <a href="#">Submenu 4-2</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h2>Main Content</h2>
+        <p>여기에 작성.</p>
+    </div>
+</body>
+
+</html>

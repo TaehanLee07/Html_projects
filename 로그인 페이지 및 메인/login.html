@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="login-form">
+        <h1>LOGO HERE</h1>
+        <form action="3dCard/index.html" method="post" id="login-form">
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="user-name">USER NAME</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="password">PASSWORD</label>
+            </div>
+            <div class="btn-area">
+                <button type="submit">LOGIN</button>
+            </div>
+        </form>
+        <div class="caption">
+            <a href="">비밀번호를 잊어버리셨나요?</a>
+        </div>
+
+        <script src="jquery-1.8.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                let id = $('#id');
+                let pw = $('#pw');
+                let btn = $('button[type="submit"]');
+
+                $(btn).on('click', function (e) {
+                    if ($(id).val() === "" || $(pw).val() === "") {
+                        e.preventDefault();
+                        $(id).next('label').addClass('warning');
+                        $(pw).next('label').addClass('warning');
+                        setTimeout(function () {
+                            $(id).next('label').removeClass('warning');
+                            $(pw).next('label').removeClass('warning');
+                        }, 3000); // 3초 후에 경고 표시 제거
+                    }
+                });
+            });
+        </script>
+    </section>
+</body>
+
+</html>
