@@ -13,6 +13,14 @@
     background: crimson;
 
     animation: sss 1s 0s infinite ease-in-out alternate;
+    /* ease : 천천 -> 빠르게 -> 천천 
+    liner : 등속
+    ease-in : 천천히 -> 보통
+    ease-out : 보통 -> 천천
+    ease-in-out : 천천 -> 보통 -> 천천
+    cubic-besizer : 커스텀
+    steps : 순차적으로 보여줌
+    */
 }
 
 .box:nth-child(2) {
