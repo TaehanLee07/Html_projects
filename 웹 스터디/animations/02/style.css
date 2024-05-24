@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background: crimson;
+    margin: 100px auto ;
+    border-radius: 50%;
+    /* 처음에 보여질 box 의 모양과 색상을 잡아 준다 */
+    outline: 1px solid transparent;
+    /* 브라우저 충돌 막으려고 (firefox 에서 깨짐) */
+    animation: circle 2s 1s infinite alternate;
+    /* ★ 설명 ★
+    애니메이션 속성을 계속 쓸수 있음
+    circle = 이름
+    2s 진행시간
+    1s 딜레이 _> 1초후에 진행
+    infinite = 무한 반복
+    alternate 애니메이션 연결을 똑바로 진행하고 리버스도 시켜주게 함
+     */
+}
+@keyframes circle {
+    0% {
+        border-radius: 20% 30% 20% 0;
+        width: 50px;
+        height: 50px;
+        background: darkred;
+    }
+    30% {
+        border-radius: 0 30% 40% 30%;
+        width: 100px;
+        height: 100px;
+        background: coral;
+    }
+    60% {
+        border-radius: 40% 0 40% 50%;
+        width: 150px;
+        height: 150px;
+        background: pink;
+    }
+    100% {
+        border-radius: 50% 50% 0% 50%;
+        width: 200px;
+        height: 200px;
+        background: lightblue;
+    }
+}
+/* 0%에 나타날 애니메이션 30%에 60% ~ 나타날 애니메이션을 쭉 쓰면
+안에 쓴 기능들이 애니멩시녀 처럼 자연스럽게 움직입니다.  */
+
